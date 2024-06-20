@@ -1,6 +1,19 @@
+@font-face{
+    font-family: "a";
+    src: url(/fonts/jost-variable.ttf);
+}
+@font-face{
+    font-family: "b";
+    src: url(/fonts/KFOlCnqEu92Fr1MmEU9fBBc4\ \(1\).ttf);
+}
+@font-face{
+    font-family: "c";
+    src: url(/fonts/KFOmCnqEu92Fr1Mu4mxK\ \(1\).ttf);
+}
 *{
     margin: 0;
     padding: 0;
+    color: white;
     box-sizing: border-box;
 }
 html, body{
@@ -11,4 +24,84 @@ html, body{
 .main{
     position: relative;
     overflow: hidden;
+}
+
+#page-1{
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+    position: relative;
+}
+#page-1>nav{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    padding: 0 4vw;
+    padding-top: 1.5vw;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+#page-1>nav img{
+    width: 3.75vw;
+}
+#right-nav{
+    display: flex;
+    padding-bottom: 0.25vw;
+    gap: 1.25vw;
+}
+#right-nav button{
+    padding: 0.5vw 1.65vw;
+    background: transparent;
+    font-family: a;
+    border: 1px solid rgba(217, 217, 217, 0.505);
+    border-radius: 20px;
+    font-size: 0.99vw;
+}
+.page-1-hero{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 0 9vw;
+    height: 43vh;
+    width: 100vw;
+    margin-top: 44.25vh;
+    /* background-color: transparent; */
+}
+.page-1-hero h1{
+    width: 60%;
+    font-size: 6.5vw;
+    font-family: a, sans-serif;
+    font-weight: 100;
+    line-height: 1;
+}
+#hero-section{
+    width: 50%;
+    display: flex;
+    gap: 0.6vw;
+    align-items: center;
+    padding: 3.75vw 0 0 0.45vw;
+}
+#hero-section h4{
+    width: 65%;
+    font-size: 1.25vw;
+    font-weight: 200;
+    font-family: a, sans-serif;
+}
+#hero-section button{
+    margin-top: 2.25vw;
+    padding: 0.9vw 3vw;
+    background: white;
+    font-family: a;
+    text-transform: uppercase;
+    border: 0;
+    color: rgb(10, 60, 206);
+    border-radius: 30px;
+    font-size: 0.99vw;
+}
+#page-1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
