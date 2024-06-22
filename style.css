@@ -129,7 +129,6 @@ html, body{
     font-family: a;
     color: white;
     padding: 0 9.25vw;
-    
     background-color: #0a3cce;
 }
 #page-2>h3{
@@ -154,6 +153,7 @@ html, body{
 #page-3{
     height: 100vh;
     width: 100vw;
+    background-color: #0a3cce;
     position: relative;
 }
 #page-3>canvas{
