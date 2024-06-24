@@ -57,6 +57,16 @@ function textSpliting_1(){
   h1Element.innerHTML = clutter;
   h1Element.style.color = "rgba(169, 169, 169, 0.689)"
 }
+function textSpliting_2(){
+  const h1Element = document.querySelector("#page-6>h1");
+  const textContent = h1Element.textContent;
+  let clutter = "";
+  for (const char of textContent) {
+    clutter += `<span>${char}</span>`;
+  }
+  h1Element.innerHTML = clutter;
+  h1Element.style.color = "rgba(169, 169, 169, 0.689)"
+}
 function textColorAnimation(){
   gsap.to("#page-2>h1>span", {
     scrollTrigger:{
@@ -75,6 +85,18 @@ function textColorAnimation(){
       trigger: `#page-4>h1>span`,
       start: `1850 bottom`,
       end: `bottom -2150`,
+      scroller: `.main`,
+      scrub: 1,
+      markers: true
+    },
+    stagger: .2,
+    color: `#ffff`,
+  })
+  gsap.to("#page-6>h1>span", {
+    scrollTrigger:{
+      trigger: `#page-2>h1>span`,
+      start: `-75 bottom`,
+      end: `bottom 300`,
       scroller: `.main`,
       scrub: 1,
       markers: true
@@ -302,24 +324,11 @@ function canvas_1(){
       ./bridges00157.png
       ./bridges00160.png
       ./bridges00163.png
-      ./bridges00166.png
-      ./bridges00169.png
-      ./bridges00172.png
-      ./bridges00175.png
-      ./bridges00178.png
-      ./bridges00181.png
-      ./bridges00184.png
-      ./bridges00187.png
-      ./bridges00190.png
-      ./bridges00193.png
-      ./bridges00196.png
-      ./bridges00199.png
-      ./bridges00202.png
  `  ;
     return data.split("\n")[index];
   }
 
-  const frameCount = 67;
+  const frameCount = 54;
 
   const images = [];
   const imageSeq = {
@@ -394,6 +403,7 @@ function canvas_1(){
 locomotive();
 textSpliting();
 textSpliting_1();
+textSpliting_2();
 textColorAnimation();
 canvas();
 canvas_1();
