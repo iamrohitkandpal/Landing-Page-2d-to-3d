@@ -220,6 +220,7 @@ html, body{
     flex-direction: column;
     position: relative;
     font-family: a;
+    background-color: #1035c6;
     padding: 0 9.25vw;
 }
 #page-6>h3{
@@ -233,9 +234,24 @@ html, body{
     font-weight: 300;
     font-size: 4vw;
     line-height: 1.2;
-    color: rgba(169, 169, 169, 0.689);
+    color: white;
     margin-bottom: 4vw;
 }
 #page-6 span{
     color: rgba(169, 169, 169, 0.689) !important;
+}
+
+
+/*////////// Page 6 Starts From Here //////////*/
+
+#page-7{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1035c6;
+    position: relative;
+}
+#page-7>canvas{
+    max-width: 100vw;
+    max-height: 100vh;
+    position: relative;
 }

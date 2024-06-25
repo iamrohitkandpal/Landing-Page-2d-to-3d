@@ -46,28 +46,7 @@ function textSpliting(){
   }
   h1Element.innerHTML = clutter;
   h1Element.style.color = "rgba(169, 169, 169, 0.689)"
-}
-function textSpliting_1(){
-  const h1Element = document.querySelector("#page-4>h1");
-  const textContent = h1Element.textContent;
-  let clutter = "";
-  for (const char of textContent) {
-    clutter += `<span>${char}</span>`;
-  }
-  h1Element.innerHTML = clutter;
-  h1Element.style.color = "rgba(169, 169, 169, 0.689)"
-}
-function textSpliting_2(){
-  const h1Element = document.querySelector("#page-6>h1");
-  const textContent = h1Element.textContent;
-  let clutter = "";
-  for (const char of textContent) {
-    clutter += `<span>${char}</span>`;
-  }
-  h1Element.innerHTML = clutter;
-  h1Element.style.color = "rgba(169, 169, 169, 0.689)"
-}
-function textColorAnimation(){
+
   gsap.to("#page-2>h1>span", {
     scrollTrigger:{
       trigger: `#page-2>h1>span`,
@@ -80,23 +59,45 @@ function textColorAnimation(){
     stagger: .2,
     color: `#ffff`,
   })
+}
+function textSpliting_1(){
+  const h1Element = document.querySelector("#page-4>h1");
+  const textContent = h1Element.textContent;
+  let clutter = "";
+  for (const char of textContent) {
+    clutter += `<span>${char}</span>`;
+  }
+  h1Element.innerHTML = clutter;
+  h1Element.style.color = "rgba(169, 169, 169, 0.689)"
+
   gsap.to("#page-4>h1>span", {
     scrollTrigger:{
       trigger: `#page-4>h1>span`,
       start: `1850 bottom`,
-      end: `bottom -2150`,
+      end: `bottom -2000`,
       scroller: `.main`,
       scrub: 1,
-      markers: true
+      // markers: true
     },
     stagger: .2,
     color: `#ffff`,
   })
+}
+function textSpliting_2(){
+  const h1Element = document.querySelector("#page-6>h1");
+  const textContent = h1Element.textContent;
+  let clutter = "";
+  for (const char of textContent) {
+    clutter += `<span>${char}</span>`;
+  }
+  h1Element.innerHTML = clutter;
+  // h1Element.style.color = "rgba(169, 169, 169, 0.689)"
+
   gsap.to("#page-6>h1>span", {
     scrollTrigger:{
-      trigger: `#page-2>h1>span`,
-      start: `-75 bottom`,
-      end: `bottom 300`,
+      trigger: `#page-6`,
+      start: `100% bottom`,
+      end: `bottom 0%`,
       scroller: `.main`,
       scrub: 1,
       markers: true
@@ -403,7 +404,6 @@ function canvas_1(){
 locomotive();
 textSpliting();
 textSpliting_1();
-textSpliting_2();
-textColorAnimation();
+// textSpliting_2();
 canvas();
 canvas_1();
