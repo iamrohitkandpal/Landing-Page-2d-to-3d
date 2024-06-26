@@ -612,8 +612,33 @@ function canvas_2(){
   });
 }
 
+// gsap.to(".page-7-cir", {
+//   scrollTrigger: {
+//     scrub: .5,
+//     trigger: `.page-7-cir`,
+//     start: `1400% 200%`,
+//     end: `1800% 500%`,
+//     scroller: `.main`,
+//     markers: true,
+//   },
+//   scale:2,
+//   opacity: 1,
+//   onUpdate: boom()
+// })
 
+gsap.to(".page-7-cir",{
+  scrollTrigger:{
+    trigger:`.page-7-cir`,
+    start:`top center`,
+    end:`bottom top`,
+    scroller:`.main`,
+    scrub:.5,
+    markers: true,
+  },
+  scale:1.5
+})
 
+// See at all my code why the hell is gsap not working properly and what is the issue please help me to resolve it
 
 
  
